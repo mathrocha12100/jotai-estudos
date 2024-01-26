@@ -16,7 +16,7 @@ function Secret({ secret }: SecretProps) {
 	return isSecretCodeSuccess(secret) ? (
 		<div className="mt-4 mb-4">
 			<h1 className="text-emerald-300 text-lg italic">
-				Voce fez o L de lacoste 🐊
+				Agora voce faz parte da tropa da lacoste 🐊
 			</h1>
 		</div>
 	) : null;
