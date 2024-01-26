@@ -2,8 +2,6 @@ const SECRET_CODES = [
 	'tropa da lala',
 	'andamos de crocodilo mas nao aceitamos crocodilagem',
 	'faz o l de lacoste',
-	'e pra comecar o final de semana',
-	'lacoste',
 ];
 
 type SecretProps = {
