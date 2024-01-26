@@ -1,7 +1,7 @@
 import { Heart, HeartHandshake, Plus, Trash2, X } from 'lucide-react';
 import { PrimitiveAtom, useAtom } from 'jotai';
 import { useRef } from 'react';
-import RandomID from '../../components/RandomID';
+import ComponentRenderedTag from '../../components/ComponentRenderedTag';
 
 export type PostItemProps = {
 	login: string;
@@ -58,7 +58,7 @@ function Post({ atom, removePost }: PostProps) {
 						<span className="text-lg text-slate-100">{post.login}</span>
 					</div>
 					<div className="flex">
-						<RandomID className="flex justify-end mt-1 mb-2" cyan />
+						<ComponentRenderedTag className="flex justify-end mt-1 mb-2" cyan />
 						<button
 							onClick={removePost}
 							type="button"
@@ -84,7 +84,7 @@ function Post({ atom, removePost }: PostProps) {
 				</div>
 			</div>
 			<div className="flex flex-col border-t-2 border-slate-600 mt-2">
-				<RandomID className="flex justify-end mt-1 mb-2" emerald />
+				<ComponentRenderedTag className="flex justify-end mt-1 mb-2" emerald />
 				{post.comments.map((comment, i) => (
 					<div className="flex items-start mt-2" key={`comment-${i}`}>
 						<span className="text-slate-500 text-xs">{comment}</span>

@@ -6,6 +6,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import PostListJotai from '../pages/PostListJotai';
 import JotaiSuperPostList from '../pages/JotaiSuperPostList';
 import PostListCtx from '../pages/PostListCtx';
+import SimpleRender from '../pages/SimpleRender';
 
 const router = createBrowserRouter([
 	{
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
 			{
 				path: 'context-post-list',
 				element: <PostListCtx />,
+			},
+			{
+				path: 'examples-simple-render',
+				element: <SimpleRender />,
 			},
 		],
 	},

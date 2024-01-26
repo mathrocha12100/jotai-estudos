@@ -1,0 +1,35 @@
+@keyframes reRenderAnimation {
+    0% {
+        border: 1px dashed red;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@keyframes reRenderAnimationBig {
+    0% {
+        border: 3px dashed red;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+.roll-out {
+    animation: 0.6s reRenderAnimation;
+}
+
+.roll-out-big {
+    animation: 0.6s reRenderAnimationBig;
+}

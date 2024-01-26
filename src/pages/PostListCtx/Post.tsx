@@ -1,7 +1,7 @@
 import { Heart, HeartHandshake, Plus, Trash2, X } from 'lucide-react';
 import { usePostList } from './PostListContext';
 import { useRef } from 'react';
-import RandomID from '../../components/RandomID';
+import ComponentRenderedTag from '../../components/ComponentRenderedTag';
 
 export type PostProps = {
 	login: string;
@@ -55,7 +55,7 @@ function Post({
 					<span className="text-lg text-slate-100">{login}</span>
 				</div>
 				<div className="flex">
-					<RandomID className="flex justify-end mt-1 mb-2" emerald />
+					<ComponentRenderedTag className="flex justify-end mt-1 mb-2" emerald />
 					<button
 						onClick={() => handleRemovePost(postKey)}
 						type="button"

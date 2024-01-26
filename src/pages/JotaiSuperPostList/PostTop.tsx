@@ -3,7 +3,7 @@ import { PostItemProps } from './BetterPost';
 import { postTopData } from '../../atoms/post';
 import { Trash2, HeartHandshake, Heart } from 'lucide-react';
 import { useAtomCallback } from 'jotai/utils';
-import RandomID from '../../components/RandomID';
+import ComponentRenderedTag from '../../components/ComponentRenderedTag';
 
 type PostTopProps = {
 	atom: PrimitiveAtom<PostItemProps>;
@@ -29,7 +29,7 @@ function PostTop({ atom, removePost }: PostTopProps) {
 					<span className="text-lg text-slate-100">{post.login}</span>
 				</div>
 				<div className="flex">
-					<RandomID className="flex justify-end mt-1 mb-2" emerald />
+					<ComponentRenderedTag className="flex justify-end mt-1 mb-2" emerald />
 					<button
 						onClick={removePost}
 						type="button"

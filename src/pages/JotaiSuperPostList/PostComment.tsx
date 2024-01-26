@@ -4,7 +4,7 @@ import { postCommentsData } from '../../atoms/post';
 import { useRef } from 'react';
 import { Plus, X } from 'lucide-react';
 import { useAtomCallback } from 'jotai/utils';
-import RandomID from '../../components/RandomID';
+import ComponentRenderedTag from '../../components/ComponentRenderedTag';
 
 type HandleCommentProps =
 	| {
@@ -49,7 +49,7 @@ function PostComment({ atom }: PostCommentProps) {
 
 	return (
 		<div className="flex flex-col border-t-2 border-slate-600 mt-2">
-			<RandomID className="flex justify-end mt-1 mb-2" cyan />
+			<ComponentRenderedTag className="flex justify-end mt-1 mb-2" cyan />
 
 			{comments.map((comment, i) => (
 				<div className="flex items-start mt-2 justify-between" key={`comment-${i}`}>

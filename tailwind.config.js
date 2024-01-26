@@ -6,10 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      
     },
     borderWidth: {
-      '1': '1px'
+      '1': '1px',
+      '2': '2px',
+      '4': '4px'
     }
   },
   plugins: [],

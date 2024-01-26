@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 function App() {
 	return (
 		<GlobalProvider>
-			<div className="min-w-screen max-h-screen bg-zinc-700 flex">
+			<div className="min-w-screen max-h-screen bg-zinc-700 flex font-sans">
 				<Sidebar />
 				<div className="overflow-y-auto w-full">
 					<Outlet />

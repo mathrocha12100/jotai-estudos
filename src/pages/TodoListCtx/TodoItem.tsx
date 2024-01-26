@@ -1,6 +1,6 @@
 import { Trash2, Square, CheckSquare } from 'lucide-react';
 import { useTodoContext } from './TodoContext';
-import RandomID from '../../components/RandomID';
+import ComponentRenderedTag from '../../components/ComponentRenderedTag';
 
 export type TodoItemProps = {
 	description: string;
@@ -39,7 +39,7 @@ function TodoItem({ todo, todoKey }: TodoItemType) {
 				>
 					<Trash2 className="h-4 w-4" />
 				</button>
-				<RandomID className="ml-2" cyan />
+				<ComponentRenderedTag className="ml-2" cyan />
 			</div>
 		</div>
 	);

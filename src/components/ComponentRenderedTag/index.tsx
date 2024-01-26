@@ -1,7 +1,8 @@
 import { tv, VariantProps } from 'tailwind-variants';
-import { generateRandomID } from '../../utils/random';
 import { global__showDebugIds } from '../../atoms/global';
 import { useGlobalAtomValue } from '../../hooks/jotai-global';
+
+import ReactRendered from '../ReactRendered';
 
 const idStyles = tv({
 	base: 'p-1 bg rounded-md flex items-center justify-center',
@@ -34,7 +35,7 @@ function RandomID({ className, ...rest }: RandomIDProps) {
 		<div className={className}>
 			<div className={idStyles({ ...rest })}>
 				<code className="italic text-slate-100 text-sm">
-					[{generateRandomID()}]
+					<ReactRendered className="text-slate-100" big />
 				</code>
 			</div>
 		</div>
