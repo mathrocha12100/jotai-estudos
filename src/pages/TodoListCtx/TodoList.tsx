@@ -16,7 +16,7 @@ function TodoList() {
 	};
 
 	return (
-		<div className="flex w-full">
+		<div className="flex w-full justify-center">
 			<div className="flex flex-col p-2 bg-zinc-600 max-w-[600px] rounded-md w-full">
 				<h1 className="text-2xl font-bold text-slate-100 mb-4">
 					<b className="text-blue-500">[ REACT CONTEXT ]</b> Todo List

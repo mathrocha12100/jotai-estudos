@@ -7,38 +7,43 @@ import {
 } from '../../atoms/post';
 import { useRef, useState } from 'react';
 import { Plus } from 'lucide-react';
+import { useGlobalAtomValue } from '../../hooks/jotai-global';
+import { global__showDebugIds } from '../../atoms/global';
 
 const myUser = {
 	...generateRandomPosts(1)[0],
 	comments: [],
 };
 
-function ShowData() {
+function DebugData() {
 	const [show, setShow] = useState(false);
-
-	const posts = useAtomValue(atomPosts);
+	const [posts] = useAtomValue(atomPosts);
 
 	return (
 		<div className="flex flex-col bg-slate-600 max-w-[500px] w-full rounded-md p-2">
-			{!show ? (
-				<button
-					className="bg-emerald-400 rounded-md max-w-[200px] mb-4"
-					type="button"
-					onClick={() => setShow(true)}
-				>
-					Show Data
-				</button>
-			) : (
-				<button
-					className="bg-rose-400 rounded-md max-w-[200px] mb-4"
-					type="button"
-					onClick={() => setShow(false)}
-				>
-					Hide Data
-				</button>
-			)}
+			<div className="flex justify-center w-full ">
+				{!show ? (
+					<button
+						className="bg-emerald-400 text-zinc-800 p-1.5 pl-2 pr-2 rounded-md max-w-[200px] mb-4"
+						type="button"
+						onClick={() => setShow(true)}
+					>
+						Show Data
+					</button>
+				) : (
+					<button
+						className="bg-rose-400 rounded-md max-w-[200px] mb-4 text-zinc-100 p-1.5 pl-2 pr-2 "
+						type="button"
+						onClick={() => setShow(false)}
+					>
+						Hide Data
+					</button>
+				)}
+			</div>
 
-			<h1 className="text-lg text-slate-100 font-bold mb-4">[JOTAI] POSTLIST</h1>
+			<h1 className="text-center text-lg text-slate-100 font-bold mb-4">
+				[JOTAI] POSTLIST
+			</h1>
 
 			{show && (
 				<pre className="bg-slate-800 p-2 text-orange-400 border-2 border-slate-950 text-sm italic rounded-md overflow-auto">
@@ -47,6 +52,14 @@ function ShowData() {
 			)}
 		</div>
 	);
+}
+
+function ShowDebugDataComponent() {
+	const shouldShow = useGlobalAtomValue(global__showDebugIds);
+
+	if (!shouldShow) return;
+
+	return <DebugData />;
 }
 
 function PostListJotai() {
@@ -70,8 +83,8 @@ function PostListJotai() {
 	};
 
 	return (
-		<div className="flex p-4 gap-4">
-			<div className="flex justify-center w-full flex-col">
+		<div className="flex p-4 gap-4 justify-between">
+			<div className="flex items-center w-full flex-col">
 				<div className="bg-slate-900 rounded-md p-2 mb-4 max-w-[500px] w-full">
 					<h1 className="text-slate-100 text-lg">
 						<span className="text-slate-50 italic">[Jotai PostList] </span> Add Post
@@ -104,7 +117,7 @@ function PostListJotai() {
 					/>
 				))}
 			</div>
-			<ShowData />
+			<ShowDebugDataComponent />
 		</div>
 	);
 }

@@ -26,7 +26,7 @@ function PostListCtx() {
 
 	return (
 		<div className="flex p-4 gap-4">
-			<div className="flex justify-center w-full flex-col">
+			<div className="flex items-center w-full flex-col">
 				<div className="bg-slate-900 rounded-md p-2 mb-4 max-w-[500px] w-full">
 					<h1 className="text-slate-100 text-lg">
 						<span className="text-blue-400 italic">[Context API PostList] </span>
