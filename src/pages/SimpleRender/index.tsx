@@ -3,20 +3,9 @@ import ForgotPasswordForm from './ForgotPasswordForm';
 import LoginForm from './LoginForm';
 import ComponentBadge from '../../components/ComponentBadge';
 import RenderInfo from '../../components/RenderInfo';
-
-const SECRET_CODES = [
-	'tropa da lala',
-	'andamos de crocodilo mas nao aceitamos crocodilagem',
-	'faz o l de lacoste',
-	'e pra comecar o final de semana',
-	'lacoste',
-];
+import Secret from './Segredinho/Secret';
 
 function SimpleRender() {
-	const isSecretCodeSuccess = (text: string) => {
-		return SECRET_CODES.includes(text.toLocaleLowerCase());
-	};
-
 	const [secretCode, setSecretGod] = useState('');
 
 	return (
@@ -42,13 +31,7 @@ function SimpleRender() {
 					onChange={({ target }) => setSecretGod(target.value)}
 				/>
 
-				{isSecretCodeSuccess(secretCode) && (
-					<div className="mt-4 mb-4">
-						<h1 className="text-emerald-300 text-lg italic">
-							Voce fez o L de lacoste 🐊
-						</h1>
-					</div>
-				)}
+				<Secret secret={secretCode} />
 
 				<RenderInfo className="text-yellow-400" componentTree="[ SimpleRender ]" />
 			</div>

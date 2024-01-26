@@ -37,6 +37,10 @@ const router = createBrowserRouter([
 				path: 'examples-simple-render',
 				element: <SimpleRender />,
 			},
+			{
+				path: 'examples-simple-context-render',
+				element: <h1>W.I.P</h1>,
+			},
 		],
 	},
 ]);
