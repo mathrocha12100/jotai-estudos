@@ -26,7 +26,7 @@ function ForgotPasswordForm() {
 	const [input, setInput] = useState('');
 
 	return (
-		<div className="relative flex flex-col p-4 rounded-md w-[400px] h-[360px] bg-slate-800 border-2 border-dashed border-green-500">
+		<div className="relative flex flex-col p-4 rounded-md w-[500px] h-[360px] bg-slate-800 border-2 border-dashed border-green-500">
 			<ComponentBadge
 				name="ForgotPasswordForm"
 				className="text-green-500 bg-slate-700"
@@ -34,7 +34,7 @@ function ForgotPasswordForm() {
 			<h1 className="text-slate-100 text-lg mb-4">Recuperar sua senha</h1>
 			<input
 				placeholder="Digite seu email"
-				className="pl-2 outline-none p-1 bg-slate-900 text-slate-300 rounded-md border-1 border-slate-700 text-md"
+				className="placeholder:text-sm pl-2 outline-none p-1 bg-slate-900 text-slate-300 rounded-md border-1 border-slate-700 text-md"
 				value={input}
 				onChange={({ target }) => setInput(target.value)}
 			/>

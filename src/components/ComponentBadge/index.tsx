@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 
 const componentBadge = tv({
-	base: 'absolute top-1 right-1 p-0.5 text-xs pl-2 pr-2',
+	base: 'absolute top-1 right-1 p-1 rounded-md text-xs pl-2 pr-2',
 });
 
 type ComponentBadgeProps = {

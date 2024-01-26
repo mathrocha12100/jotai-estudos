@@ -27,18 +27,18 @@ function LoginForm() {
 	const [password, setPassword] = useState('');
 
 	return (
-		<div className="flex flex-col p-4 rounded-md w-[400px] h-[360px] bg-slate-800 relative border-2 border-dashed border-sky-500">
+		<div className="flex flex-col p-4 rounded-md w-[500px] h-[360px] bg-slate-800 relative border-2 border-dashed border-sky-500">
 			<ComponentBadge name="LoginForm" className="bg-slate-700 text-sky-500" />
 			<h1 className="text-slate-100 text-lg mb-4">Entrar no site</h1>
 			<input
 				placeholder="Digite seu email"
-				className="outline-none p-1 bg-slate-900 text-slate-300 rounded-md border-1 border-slate-700 text-md pl-2"
+				className="placeholder:text-sm outline-none p-1 bg-slate-900 text-slate-300 rounded-md border-1 border-slate-700 text-md pl-2"
 				value={input}
 				onChange={({ target }) => setInput(target.value)}
 			/>
 			<input
 				placeholder="Digite sua senha"
-				className="mt-2 outline-none p-1 bg-slate-900 text-slate-300 rounded-md border-1 border-slate-700 text-md pl-2"
+				className="placeholder:text-sm mt-2 outline-none p-1 bg-slate-900 text-slate-300 rounded-md border-1 border-slate-700 text-md pl-2"
 				value={password}
 				type="password"
 				onChange={({ target }) => setPassword(target.value)}

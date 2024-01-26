@@ -17,7 +17,7 @@ function RenderInfo({ componentTree, className }: RenderInfoProps) {
 				Component: <span className="text-yellow-400">{componentTree}</span>
 			</span>
 			<span className="text-slate-100">
-				renderizei <ReactRendered className={renderinfo({ className })} />x
+				Renderizou <ReactRendered className={renderinfo({ className })} />x
 			</span>
 		</div>
 	);

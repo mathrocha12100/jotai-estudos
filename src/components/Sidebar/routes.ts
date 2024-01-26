@@ -19,7 +19,7 @@ export const ROUTES = [
 		],
 	},
 	{
-		group: 'Explicando renderizacao',
-		routes: [createRoute('Renderizacao', 'examples-simple-render')],
+		group: 'Exemplos renderização',
+		routes: [createRoute('Renderização basica', 'examples-simple-render')],
 	},
 ];
