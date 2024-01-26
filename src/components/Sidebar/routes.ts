@@ -19,6 +19,13 @@ export const ROUTES = [
 		],
 	},
 	{
+		group: 'Jotai + React Query',
+		routes: [
+			createRoute('List', 'jotai-react-query-list'),
+			createRoute('Infinity List', 'jotai-react-query-infinity-list'),
+		],
+	},
+	{
 		group: 'Exemplos renderização',
 		routes: [
 			createRoute('Renderização basica', 'examples-simple-render'),

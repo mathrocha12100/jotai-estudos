@@ -7,6 +7,8 @@ import PostListJotai from '../pages/PostListJotai';
 import JotaiSuperPostList from '../pages/JotaiSuperPostList';
 import PostListCtx from '../pages/PostListCtx';
 import SimpleRender from '../pages/SimpleRender';
+import JotaiReactQueryList from '../pages/JotaiReactQueryList';
+import JotaiReactQueryInfinity from '../pages/JotaiReactQueryInfinity';
 
 const router = createBrowserRouter([
 	{
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
 			{
 				path: 'context-post-list',
 				element: <PostListCtx />,
+			},
+			{
+				path: 'jotai-react-query-list',
+				element: <JotaiReactQueryList />,
+			},
+			{
+				path: 'jotai-react-query-infinity-list',
+				element: <JotaiReactQueryInfinity />,
 			},
 			{
 				path: 'examples-simple-render',
