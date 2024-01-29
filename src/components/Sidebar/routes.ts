@@ -4,6 +4,13 @@ function createRoute(name: string, path: string) {
 
 export const ROUTES = [
 	{
+		group: 'Exemplos renderização',
+		routes: [
+			createRoute('Renderização basica', 'examples-simple-render'),
+			createRoute('Renderizacao Context API', 'examples-simple-context-render'),
+		],
+	},
+	{
 		group: 'Todo List',
 		routes: [
 			createRoute('Jotai', 'jotai-todo-list'),
@@ -30,9 +37,5 @@ export const ROUTES = [
 			createRoute('List', 'jotai-react-query-list'),
 			createRoute('Infinity List', 'jotai-react-query-infinity-list'),
 		],
-	},
-	{
-		group: 'Exemplos renderização',
-		routes: [createRoute('Renderização basica', 'examples-simple-render')],
 	},
 ];

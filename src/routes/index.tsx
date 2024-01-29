@@ -10,6 +10,7 @@ import JotaiReactQueryList from '../pages/JotaiReactQueryList';
 import JotaiReactQueryInfinity from '../pages/JotaiReactQueryInfinity';
 import JotaiUserForm from '../pages/JotaiUserForm';
 import ContextUserForm from '../pages/ContextUserForm';
+import ContextRender from '../pages/ContextRender';
 
 const router = createBrowserRouter([
 	{
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'examples-simple-context-render',
-				element: <h1>W.I.P</h1>,
+				element: <ContextRender />,
 			},
 		],
 	},
