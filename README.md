@@ -14,7 +14,7 @@
 ### TodoList
 
 - `/jotai-todo-list` TodoList feita usando o `Jotai`
-- `context-todo-list` TodoList feita usando o `React Context API`
+- `/context-todo-list` TodoList feita usando o `React Context API`
 
 ### Posts
 
