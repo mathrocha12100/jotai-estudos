@@ -14,8 +14,14 @@ export const ROUTES = [
 		group: 'Posts',
 		routes: [
 			createRoute('Jotai', 'jotai-post-list'),
-			createRoute('Jotai Super', 'jotai-super-post-list'),
 			createRoute('Context API', 'context-post-list'),
+		],
+	},
+	{
+		group: 'User Form',
+		routes: [
+			createRoute('Jotai', 'jotai-user-form'),
+			createRoute('Context API', 'context-user-form'),
 		],
 	},
 	{
@@ -27,9 +33,6 @@ export const ROUTES = [
 	},
 	{
 		group: 'Exemplos renderização',
-		routes: [
-			createRoute('Renderização basica', 'examples-simple-render'),
-			createRoute('Renderização com contextos', 'examples-simple-context-render'),
-		],
+		routes: [createRoute('Renderização basica', 'examples-simple-render')],
 	},
 ];

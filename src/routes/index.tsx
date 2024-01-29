@@ -4,11 +4,12 @@ import TodoListCtx from '../pages/TodoListCtx';
 
 import { createBrowserRouter } from 'react-router-dom';
 import PostListJotai from '../pages/PostListJotai';
-import JotaiSuperPostList from '../pages/JotaiSuperPostList';
 import PostListCtx from '../pages/PostListCtx';
 import SimpleRender from '../pages/SimpleRender';
 import JotaiReactQueryList from '../pages/JotaiReactQueryList';
 import JotaiReactQueryInfinity from '../pages/JotaiReactQueryInfinity';
+import JotaiUserForm from '../pages/JotaiUserForm';
+import ContextUserForm from '../pages/ContextUserForm';
 
 const router = createBrowserRouter([
 	{
@@ -24,16 +25,20 @@ const router = createBrowserRouter([
 				element: <TodoListCtx />,
 			},
 			{
-				path: 'jotai-super-post-list',
-				element: <JotaiSuperPostList />,
-			},
-			{
 				path: 'jotai-post-list',
 				element: <PostListJotai />,
 			},
 			{
 				path: 'context-post-list',
 				element: <PostListCtx />,
+			},
+			{
+				path: 'jotai-user-form',
+				element: <JotaiUserForm />,
+			},
+			{
+				path: 'context-user-form',
+				element: <ContextUserForm />,
 			},
 			{
 				path: 'jotai-react-query-list',

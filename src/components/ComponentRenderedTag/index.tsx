@@ -26,7 +26,7 @@ type RandomIDProps = {
 	className?: string;
 } & VariantProps<typeof idStyles>;
 
-function RandomID({ className, ...rest }: RandomIDProps) {
+function ComponentRenderedTag({ className, ...rest }: RandomIDProps) {
 	const shouldShow = useGlobalAtomValue(global__showDebugIds);
 
 	if (!shouldShow) return;
@@ -42,4 +42,4 @@ function RandomID({ className, ...rest }: RandomIDProps) {
 	);
 }
 
-export default RandomID;
+export default ComponentRenderedTag;
