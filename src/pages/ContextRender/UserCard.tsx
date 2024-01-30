@@ -97,11 +97,26 @@ const jsx: ComponentBadgeJSX = {
 function UserCard({ user, index }: UserCardProps) {
 	const { toggleInterest } = useRenderContext();
 
+	const getCardPosition = (index: number): ComponentBadgeJSX['position'] => {
+		if (index % 3 === 0) {
+			return 'right';
+		}
+
+		if (index % 2 === 0) {
+			return 'center';
+		}
+
+		return 'left';
+	};
+
 	return (
 		<div className="p-4 relative bg-slate-900 rounded-md w-[200px] border-2 border-dashed border-green-400">
 			<ComponentBadge
 				name={`UserCard-${index}`}
-				jsx={jsx}
+				jsx={{
+					...jsx,
+					position: getCardPosition(index + 1),
+				}}
 				className="bg-slate-600 text-green-400"
 			/>
 

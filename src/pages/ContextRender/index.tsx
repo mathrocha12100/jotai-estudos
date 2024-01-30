@@ -15,7 +15,7 @@ import ComponentBadge, { ComponentBadgeJSX } from '../../components/ComponentBad
 function ContextRenderMain() {
 	return (
 		<RenderProvider>
-			<div className=...">
+			<div className="...">
 				<ComponentBadge
 					name="ContextRenderMain"
 					className="..."
