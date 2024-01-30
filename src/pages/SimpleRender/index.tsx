@@ -12,7 +12,7 @@ import code from './index?raw';
 const jsx: ComponentBadgeJSX = {
 	title: 'index.tsx',
 	path: 'src/pages/SimpleRender/index.tsx',
-	position: 'right',
+	position: 'center',
 	code,
 };
 

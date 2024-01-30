@@ -42,7 +42,7 @@ function Secret({ secret }: SecretProps) {
 const jsx: ComponentBadgeJSX = {
 	title: 'Secret.tsx',
 	path: 'src/pages/SimpleRender/Segredinho/Secret.tsx',
-	position: 'right',
+	position: 'center',
 	code,
 };
 
