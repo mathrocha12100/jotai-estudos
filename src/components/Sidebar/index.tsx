@@ -96,7 +96,7 @@ function Sidebar() {
 	const isOpen = useAtomValue(sidebarIsOpen);
 
 	return (
-		<div className={sidebar({ closed: !isOpen })}>
+		<div id="global__sidebar" className={sidebar({ closed: !isOpen })}>
 			<div className="flex flex-col">
 				<SidebarHeader />
 				{isOpen && <SidebarList />}
