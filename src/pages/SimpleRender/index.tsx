@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ForgotPasswordForm from './ForgotPasswordForm';
-import LoginForm from './LoginForm';
+import ForgotPasswordForm from './ForgotPasswordForm/ForgotPasswordForm';
+import LoginForm from './LoginForm/LoginForm';
 import ComponentBadge from '../../components/ComponentBadge';
 import RenderInfo from '../../components/RenderInfo';
 import Secret from './Segredinho/Secret';
