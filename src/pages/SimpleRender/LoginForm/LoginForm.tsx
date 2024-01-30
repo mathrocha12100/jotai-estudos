@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import RenderInfo from '../../../components/RenderInfo';
-import ComponentBadge from '../../../components/ComponentBadge';
+import ComponentBadge, {
+	ComponentBadgeJSX,
+} from '../../../components/ComponentBadge';
+import ForgotPassword from './ForgotPassword';
+
+const code = `import { useState } from 'react';
+import RenderInfo from '../../../components/RenderInfo';
+import ComponentBadge, {
+	ComponentBadgeJSX,
+} from '../../../components/ComponentBadge';
 import ForgotPassword from './ForgotPassword';
 
 function LoginForm() {
@@ -8,8 +17,60 @@ function LoginForm() {
 	const [password, setPassword] = useState('');
 
 	return (
+		<div className="...">
+			<ComponentBadge name="LoginForm" className="..." />
+			<h1 className="...">Entrar no site</h1>
+			<input
+				placeholder="Digite seu email"
+				className="..."
+				value={input}
+				onChange={({ target }) => setInput(target.value)}
+			/>
+			<input
+				placeholder="Digite sua senha"
+				className="..."
+				value={password}
+				type="password"
+				onChange={({ target }) => setPassword(target.value)}
+			/>
+
+			<ForgotPassword />
+
+			<div className="...">
+				<RenderInfo
+					componentTree="[SimpleRender -> LoginForm]"
+					className="..."
+				/>
+			</div>
+
+			<button
+				type="button"
+				className="..."
+			>
+				Recuperar meu e-mail
+			</button>
+		</div>
+	);
+}`;
+
+const jsx: ComponentBadgeJSX = {
+	title: 'LoginForm.tsx',
+	path: 'src/pages/SimpleRender/LoginForm/LoginForm.tsx',
+	position: 'right',
+	code,
+};
+
+function LoginForm() {
+	const [input, setInput] = useState('');
+	const [password, setPassword] = useState('');
+
+	return (
 		<div className="flex flex-col p-4 rounded-md w-[500px] h-[360px] bg-slate-800 relative border-2 border-dashed border-sky-500">
-			<ComponentBadge name="LoginForm" className="bg-slate-700 text-sky-500" />
+			<ComponentBadge
+				jsx={jsx}
+				name="LoginForm"
+				className="bg-slate-700 text-sky-500"
+			/>
 			<h1 className="text-slate-100 text-lg mb-4">Entrar no site</h1>
 			<input
 				placeholder="Digite seu email"
