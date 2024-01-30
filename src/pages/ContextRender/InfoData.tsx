@@ -66,8 +66,8 @@ function InfoData() {
 	const statistics = getAllData();
 
 	return (
-		<div className="relative border-2 border-dashed border-pink-400 flex flex-col p-3 bg-slate-900 rounded-md text-slate-50 mt-2">
-			<ComponentBadge name="InfoData" className="text-pink-400 bg-slate-700" />
+		<div className="...">
+			<ComponentBadge name="InfoData" className="..." />
 			<span>
 				QTD HOMENS {statistics.men.amount} | LIKES {statistics.men.likes}
 			</span>

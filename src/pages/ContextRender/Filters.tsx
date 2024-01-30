@@ -37,24 +37,24 @@ function Filters() {
 	};
 
 	return (
-		<div className="relative border-2 border-dashed border-yellow-400 p-2 flex flex-col">
+		<div className="...">
 			<ComponentBadge
 				jsx={jsxShow}
 				name="Filters"
-				className="bg-slate-600 text-yellow-400"
+				className="..."
 			/>
-			<h1 className="text-xl mb-2 text-slate-100 font-bold">List Filters</h1>
-			<div className="flex items-center">
+			<h1 className="...">List Filters</h1>
+			<div className="...">
 				<input
 					value={filters.name || ''}
 					onChange={({ target }) => changeFilterName(target.value)}
 					placeholder="Search for name"
-					className="text-slate-50 p-1 placeholder:text-sm mr-2 rounded-md border-1 border-slate-600 outline-none bg-slate-700"
+					className="..."
 				/>
 				<select
 					onChange={({ target }) => changeGenderFilter(target.value)}
 					value={filters.gender || FilterGender.ALL}
-					className="p-1 outline-none rounded-md bg-slate-700 text-slate-50 select-none"
+					className="..."
 				>
 					<option value={FilterGender.ALL}>Todos</option>
 					<option value={FilterGender.MALE}>Homem</option>
@@ -62,19 +62,19 @@ function Filters() {
 					<option value={FilterGender.OTHER}>Outros</option>
 				</select>
 
-				<div className="flex ml-4 items-center">
+				<div className="...">
 					{filters.hasInterest ? (
 						<CheckSquare
 							onClick={toggleHasInterestFilter}
-							className="text-emerald-400 w-5 h-5 cursor-pointer"
+							className="..."
 						/>
 					) : (
 						<Square
 							onClick={toggleHasInterestFilter}
-							className="text-slate-300 w-5 h-5 cursor-pointer"
+							className="..."
 						/>
 					)}
-					<span className="text-slate-50 text-sm ml-1 select-none">
+					<span className="...">
 						Filter by interest
 					</span>
 				</div>

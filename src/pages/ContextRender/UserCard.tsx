@@ -52,23 +52,23 @@ function UserCard({ user, index }: UserCardProps) {
 	const { toggleInterest } = useRenderContext();
 
 	return (
-		<div className="p-4 relative bg-slate-900 rounded-md w-[200px] border-2 border-dashed border-green-400">
+		<div className="...">
 			<ComponentBadge
 				name={index}
-				className="bg-slate-600 text-green-400"
+				className="..."
 			/>
 
-			<div className="flex flex-col items-center">
-				<img className="rounded-full w-40 h-40" alt={user.name} src={user.avatar} />
-				<span className="text-slate-50">{user.name}</span>
-				<span className="text-slate-300 text-xs">
+			<div className="...">
+				<img className="..." alt={user.name} src={user.avatar} />
+				<span className="...">{user.name}</span>
+				<span className="...">
 					{getUserGenderName(user.gender)}
 				</span>
 			</div>
-			<div className="flex">
+			<div className="...">
 				{user.hasInterest ? (
 					<button
-						className="p-1 border-1 border-slate-50/10 rounded-md mt-2 w-full text-slate-50 text-sm"
+						className=..."
 						type="button"
 						onClick={() => toggleInterest(index)}
 					>
@@ -76,7 +76,7 @@ function UserCard({ user, index }: UserCardProps) {
 					</button>
 				) : (
 					<button
-						className="p-1 bg-rose-600 rounded-md mt-2 w-full text-slate-50 font-bold text-sm"
+						className="..."
 						type="button"
 						onClick={() => toggleInterest(index)}
 					>

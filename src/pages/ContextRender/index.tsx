@@ -15,12 +15,12 @@ import ComponentBadge, { ComponentBadgeJSX } from '../../components/ComponentBad
 function ContextRenderMain() {
 	return (
 		<RenderProvider>
-			<div className="p-2 border-2 h-full border-dashed border-lime-300 relative">
+			<div className=...">
 				<ComponentBadge
 					name="ContextRenderMain"
-					className="bg-slate-500 text-lime-300 "
+					className="..."
 				/>
-				<div className="p-2 bg-slate-800 rounded-md mt-8">
+				<div className="...">
 					<Filters />
 					<InfosContainer />
 					<List />

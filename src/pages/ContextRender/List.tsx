@@ -14,19 +14,19 @@ function List() {
 	const list = getFilteredList();
 
 	return (
-		<div className="relative flex flex-col items-center border-2 border-dashed border-cyan-400 mt-2 pb-4">
-			<ComponentBadge name="List" className="bg-slate-600 text-cyan-400" />
+		<div className="...">
+			<ComponentBadge name="List" className="..." />
 
-			<h1 className="p-2 text-slate-50 font-bold text-xl">Users</h1>
+			<h1 className="...">Users</h1>
 			{list.length ? (
-				<div className="grid grid-cols-3 gap-4">
+				<div className="...">
 					{list.map((user, index) => (
 						<UserCard key={index} user={user} index={index} />
 					))}
 				</div>
 			) : (
-				<div className="flex flex-col p-2 items-center justify-center">
-					<h1 className="text-xl text-slate-300">Nenhum usuario encontrado :(</h1>
+				<div className="...">
+					<h1 className="...">Nenhum usuario encontrado :(</h1>
 				</div>
 			)}
 		</div>

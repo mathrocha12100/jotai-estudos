@@ -10,11 +10,11 @@ import InfoData from './InfoData';
 
 function InfosContainer() {
 	return (
-		<div className="relative border-2 border-dashed border-red-500 p-2 mt-2">
-			<h1 className="text-lg text-yellow-400">List statistics</h1>
+		<div className="...">
+			<h1 className="...">List statistics</h1>
 			<ComponentBadge
 				name="InfosContainer"
-				className="text-red-500 bg-slate-700"
+				className="..."
 				jsx={jsx}
 			/>
 			<InfoData />
