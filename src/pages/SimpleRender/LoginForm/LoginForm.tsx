@@ -5,53 +5,7 @@ import ComponentBadge, {
 } from '../../../components/ComponentBadge';
 import ForgotPassword from './ForgotPassword';
 
-const code = `import { useState } from 'react';
-import RenderInfo from '../../../components/RenderInfo';
-import ComponentBadge, {
-	ComponentBadgeJSX,
-} from '../../../components/ComponentBadge';
-import ForgotPassword from './ForgotPassword';
-
-function LoginForm() {
-	const [input, setInput] = useState('');
-	const [password, setPassword] = useState('');
-
-	return (
-		<div className="...">
-			<ComponentBadge name="LoginForm" className="..." />
-			<h1 className="...">Entrar no site</h1>
-			<input
-				placeholder="Digite seu email"
-				className="..."
-				value={input}
-				onChange={({ target }) => setInput(target.value)}
-			/>
-			<input
-				placeholder="Digite sua senha"
-				className="..."
-				value={password}
-				type="password"
-				onChange={({ target }) => setPassword(target.value)}
-			/>
-
-			<ForgotPassword />
-
-			<div className="...">
-				<RenderInfo
-					componentTree="[SimpleRender -> LoginForm]"
-					className="..."
-				/>
-			</div>
-
-			<button
-				type="button"
-				className="..."
-			>
-				Recuperar meu e-mail
-			</button>
-		</div>
-	);
-}`;
+import code from './LoginForm?raw';
 
 const jsx: ComponentBadgeJSX = {
 	title: 'LoginForm.tsx',

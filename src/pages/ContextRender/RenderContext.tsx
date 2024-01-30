@@ -8,6 +8,18 @@ import {
 	useMemo,
 	useState,
 } from 'react';
+import ComponentBadge, {
+	ComponentBadgeJSX,
+} from '../../components/ComponentBadge';
+
+import code from './RenderContext?raw';
+
+const jsx: ComponentBadgeJSX = {
+	title: 'RenderContext.tsx',
+	path: 'src/pages/ContextRender/RenderContext.tsx',
+	position: 'right',
+	code,
+};
 
 export enum FilterGender {
 	MALE = 1,
@@ -120,7 +132,18 @@ function RenderProvider({ children }: PropsWithChildren) {
 	);
 
 	return (
-		<RenderContext.Provider value={value}>{children}</RenderContext.Provider>
+		<RenderContext.Provider value={value}>
+			<div className="border-2 border-dashed p-4 relative mb-2">
+				<div className="mt-6" />
+				<ComponentBadge
+					name="RenderContext"
+					className="bg-slate-800 p-1 text-slate-100"
+					jsx={jsx}
+				/>
+
+				{children}
+			</div>
+		</RenderContext.Provider>
 	);
 }
 

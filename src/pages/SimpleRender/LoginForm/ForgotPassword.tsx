@@ -3,30 +3,7 @@ import ComponentBadge, {
 } from '../../../components/ComponentBadge';
 import RenderInfo from '../../../components/RenderInfo';
 
-const code = `import ComponentBadge, {
-	ComponentBadgeJSX,
-} from '../../../components/ComponentBadge';
-import RenderInfo from '../../../components/RenderInfo';
-
-function ForgotPassword() {
-	return (
-		<div className="...">
-			<ComponentBadge
-				name="ForgotPassword"
-				className="..."
-			/>
-
-			<button className="..." type="button">
-				Esqueci minha senha
-			</button>
-
-			<RenderInfo
-				componentTree="[SimpleRender -> LoginForm -> ForgotPassword]"
-				className="..."
-			/>
-		</div>
-	);
-}`;
+import code from './ForgotPassword?raw';
 
 const jsx: ComponentBadgeJSX = {
 	path: 'src/pages/SimpleRender/LoginForm/ForgotPassword.tsx',

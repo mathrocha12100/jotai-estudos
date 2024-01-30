@@ -2,25 +2,7 @@ import ComponentBadge, {
 	ComponentBadgeJSX,
 } from '../../components/ComponentBadge';
 import InfoData from './InfoData';
-
-const code = `import ComponentBadge, {
-	ComponentBadgeJSX,
-} from '../../components/ComponentBadge';
-import InfoData from './InfoData';
-
-function InfosContainer() {
-	return (
-		<div className="...">
-			<h1 className="...">List statistics</h1>
-			<ComponentBadge
-				name="InfosContainer"
-				className="..."
-				jsx={jsx}
-			/>
-			<InfoData />
-		</div>
-	);
-}`;
+import code from './InfosContainer?raw';
 
 const jsx: ComponentBadgeJSX = {
 	title: 'InfosContainer.tsx',

@@ -6,29 +6,7 @@ import ComponentBadge, {
 	ComponentBadgeJSX,
 } from '../../components/ComponentBadge';
 
-const code = `import List from './List';
-import Filters from './Filters';
-import RenderProvider from './RenderContext';
-import InfosContainer from './InfosContainer';
-import ComponentBadge, { ComponentBadgeJSX } from '../../components/ComponentBadge';
-
-function ContextRenderMain() {
-	return (
-		<RenderProvider>
-			<div className="...">
-				<ComponentBadge
-					name="ContextRenderMain"
-					className="..."
-				/>
-				<div className="...">
-					<Filters />
-					<InfosContainer />
-					<List />
-				</div>
-			</div>
-		</RenderProvider>
-	);
-}`;
+import code from './index?raw';
 
 const jsx: ComponentBadgeJSX = {
 	title: 'index.tsx',

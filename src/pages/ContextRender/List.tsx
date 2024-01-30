@@ -3,36 +3,7 @@ import UserCard from './UserCard';
 import ComponentBadge, {
 	ComponentBadgeJSX,
 } from '../../components/ComponentBadge';
-
-const code = `import { useRenderContext } from './RenderContext';
-import UserCard from './UserCard';
-import ComponentBadge, { ComponentBadgeJSX } from '../../components/ComponentBadge';
-
-function List() {
-	const { getFilteredList } = useRenderContext();
-
-	const list = getFilteredList();
-
-	return (
-		<div className="...">
-			<ComponentBadge name="List" className="..." />
-
-			<h1 className="...">Users</h1>
-			{list.length ? (
-				<div className="...">
-					{list.map((user, index) => (
-						<UserCard key={index} user={user} index={index} />
-					))}
-				</div>
-			) : (
-				<div className="...">
-					<h1 className="...">Nenhum usuario encontrado :(</h1>
-				</div>
-			)}
-		</div>
-	);
-}
-`;
+import code from './List?raw';
 
 const jsxShow: ComponentBadgeJSX = {
 	title: 'List.tsx',

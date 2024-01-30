@@ -7,54 +7,7 @@ import ComponentBadge, {
 import RenderInfo from '../../components/RenderInfo';
 import Secret from './Segredinho/Secret';
 
-const code = `import { useState } from 'react';
-import ForgotPasswordForm from './ForgotPasswordForm/ForgotPasswordForm';
-import LoginForm from './LoginForm/LoginForm';
-import ComponentBadge, {
-	ComponentBadgeJSX,
-} from '../../components/ComponentBadge';
-import RenderInfo from '../../components/RenderInfo';
-import Secret from './Segredinho/Secret';
-
-function SimpleRender() {
-	const [secretCode, setSecretGod] = useState('');
-
-	return (
-		<div className="...">
-			<ComponentBadge
-				name="SimpleRender"
-				className="..."
-			/>
-			<div className="...">
-				<ComponentBadge
-					name="SimpleRender"
-					className="..."
-					jsx={jsx}
-				/>
-
-				<span className="...">
-					Esse card esta esta no pai master dessa pagina
-				</span>
-
-				<input
-					placeholder="Digite a frase secreta para descobrir um segredo"
-					className="..."
-					value={secretCode}
-					onChange={({ target }) => setSecretGod(target.value)}
-				/>
-
-				<Secret secret={secretCode} />
-
-				<RenderInfo className="..." componentTree="[ SimpleRender ]" />
-			</div>
-			<div className="...">
-				<ForgotPasswordForm />
-				<LoginForm />
-			</div>
-		</div>
-	);
-}
-`;
+import code from './index?raw';
 
 const jsx: ComponentBadgeJSX = {
 	title: 'index.tsx',

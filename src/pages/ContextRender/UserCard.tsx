@@ -2,6 +2,7 @@ import { UserProps, FilterGender, useRenderContext } from './RenderContext';
 import ComponentBadge, {
 	ComponentBadgeJSX,
 } from '../../components/ComponentBadge';
+import code from './UserCard?raw';
 
 type UserCardProps = {
 	user: UserProps;
@@ -23,70 +24,6 @@ function getUserGenderName(gender: FilterGender) {
 			return 'Outro';
 	}
 }
-
-const code = `import { UserProps, FilterGender, useRenderContext } from './RenderContext';
-import ComponentBadge, { ComponentBadgeJSX } from '../../components/ComponentBadge';
-
-type UserCardProps = {
-	user: UserProps;
-	index: number;
-};
-
-function getUserGenderName(gender: FilterGender) {
-	switch (gender) {
-		case FilterGender.MALE: {
-			return 'Homem';
-		}
-		case FilterGender.FEMALE: {
-			return 'Mulher';
-		}
-		case FilterGender.OTHER: {
-			return 'Outro';
-		}
-		default:
-			return 'Outro';
-	}
-}
-
-function UserCard({ user, index }: UserCardProps) {
-	const { toggleInterest } = useRenderContext();
-
-	return (
-		<div className="...">
-			<ComponentBadge
-				name={index}
-				className="..."
-			/>
-
-			<div className="...">
-				<img className="..." alt={user.name} src={user.avatar} />
-				<span className="...">{user.name}</span>
-				<span className="...">
-					{getUserGenderName(user.gender)}
-				</span>
-			</div>
-			<div className="...">
-				{user.hasInterest ? (
-					<button
-						className=..."
-						type="button"
-						onClick={() => toggleInterest(index)}
-					>
-						Nao tenho interesse
-					</button>
-				) : (
-					<button
-						className="..."
-						type="button"
-						onClick={() => toggleInterest(index)}
-					>
-						Tenho interesse
-					</button>
-				)}
-			</div>
-		</div>
-	);
-}`;
 
 const jsx: ComponentBadgeJSX = {
 	title: 'UserCard.tsx',
