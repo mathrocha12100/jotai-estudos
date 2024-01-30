@@ -3,7 +3,7 @@ import { Atom } from 'lucide-react';
 import { tv } from 'tailwind-variants';
 import ReactRendered from '../ReactRendered';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { useRef } from 'react';
+import { memo, useRef } from 'react';
 
 const componentBadge = tv({
 	base: 'absolute top-1 right-1 p-1 rounded-md text-xs pl-2 pr-2 flex',
@@ -20,6 +20,20 @@ type ComponentBadgeProps = {
 	className?: string;
 	jsx?: ComponentBadgeJSX;
 };
+
+/**
+ * Como fiz rapido e esse `SyntaxHighlighter` eh pesadinho coloquei esse `memo`
+ * pra "resolver" uns problemas de performance
+ */
+const CodeShow = memo(({ jsx }: Pick<ComponentBadgeProps, 'jsx'>) => {
+	if (!jsx?.code) return null;
+
+	return (
+		<SyntaxHighlighter showLineNumbers language="tsx" style={dracula}>
+			{jsx.code}
+		</SyntaxHighlighter>
+	);
+});
 
 function ComponentBadge({ name, className, jsx }: ComponentBadgeProps) {
 	const shouldShowCode = useRef<HTMLDivElement>(null);
@@ -64,9 +78,7 @@ function ComponentBadge({ name, className, jsx }: ComponentBadgeProps) {
 							<h1 className="text-slate-100 text-lg font-bold">{jsx.title}</h1>
 						</div>
 						<span className="text-slate-400 text-sm">{jsx.path}</span>
-						<SyntaxHighlighter showLineNumbers language="tsx" style={dracula}>
-							{jsx.code}
-						</SyntaxHighlighter>
+						<CodeShow jsx={jsx} />
 					</div>
 				</div>
 			)}
