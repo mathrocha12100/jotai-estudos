@@ -11,12 +11,17 @@ import JotaiReactQueryInfinity from '../pages/JotaiReactQueryInfinity';
 import JotaiUserForm from '../pages/JotaiUserForm';
 import ContextUserForm from '../pages/ContextUserForm';
 import ContextRender from '../pages/ContextRender';
+import Motion from '../pages/Motion';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
 		children: [
+			{
+				path: 'motion-sheet',
+				element: <Motion />,
+			},
 			{
 				path: 'jotai-todo-list',
 				element: <JotaiTodoList />,

@@ -4,6 +4,10 @@ function createRoute(name: string, path: string) {
 
 export const ROUTES = [
 	{
+		group: 'Framer Motion',
+		routes: [createRoute('Bottom sheet', 'motion-sheet')],
+	},
+	{
 		group: 'Exemplos renderização',
 		routes: [
 			createRoute('Renderização basica', 'examples-simple-render'),
